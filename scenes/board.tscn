@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ch6wrnloiotl0"]
+
+[sub_resource type="TileSet" id="TileSet_phsbm"]
+tile_size = Vector2i(32, 32)
+
+[node name="Node2D" type="TileMapLayer" unique_id=1685419508]
+tile_set = SubResource("TileSet_phsbm")

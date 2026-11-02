@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://pstk2umbij7q"]
+
+[node name="Diode" type="Node2D" unique_id=126801828]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=66081351]
