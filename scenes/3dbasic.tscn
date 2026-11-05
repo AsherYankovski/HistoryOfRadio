@@ -61,7 +61,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.061366796, 0.5143982, -0.51
 collision_layer = 2
 script = ExtResource("2_rj2sv")
 
-[node name="test" parent="test" unique_id=33286147 instance=ExtResource("3_svhal")]
+[node name="test_Sprite" parent="test" unique_id=33286147 instance=ExtResource("3_svhal")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00608626, 0.09896684, -0.011904001)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="test" unique_id=157931054]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="History of radio"
-run/main_scene="uid://dqucak0padu32"
+run/main_scene="uid://bwaly2eew2ik4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
