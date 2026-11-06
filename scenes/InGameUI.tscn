@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bwaly2eew2ik4"]
 
 [ext_resource type="Script" uid="uid://hdbcrixh7onj" path="res://scenes/in_game_ui.gd" id="1_5ldle"]
-[ext_resource type="Texture2D" uid="uid://ce3cuxqlldbyh" path="res://assetes/Button.png" id="1_fsjve"]
-[ext_resource type="PackedScene" uid="uid://pstk2umbij7q" path="res://scenes/diode.tscn" id="2_5ldle"]
+[ext_resource type="PackedScene" uid="uid://pstk2umbij7q" path="res://scenes/element.tscn" id="2_5ldle"]
+[ext_resource type="PackedScene" uid="uid://oq637uty2w1p" path="res://scenes/Button.tscn" id="3_5ldle"]
 
 [node name="root" type="Control" unique_id=1493276269]
 layout_mode = 3
@@ -14,24 +14,12 @@ grow_vertical = 2
 script = ExtResource("1_5ldle")
 
 [node name="Preloader" type="ResourcePreloader" parent="." unique_id=1533720909]
-resources = [PackedStringArray("Diode"), [ExtResource("2_5ldle")]]
+resources = [PackedStringArray("element"), [ExtResource("2_5ldle")]]
 
 [node name="Buttons" type="HBoxContainer" parent="." unique_id=416848454]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Diode" type="Button" parent="Buttons" unique_id=2094898233]
+[node name="Button" parent="Buttons" unique_id=2111804290 instance=ExtResource("3_5ldle")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.3, 0.3, 0.3, 1)
-theme_override_colors/font_focus_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-theme_override_colors/font_hover_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-theme_override_colors/icon_pressed_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-theme_override_font_sizes/font_size = 26
-toggle_mode = true
-text = "Diode"
-icon = ExtResource("1_fsjve")
-flat = true
-icon_alignment = 1
-
-[connection signal="button_down" from="Buttons/Diode" to="." method="_on_button_button_down"]

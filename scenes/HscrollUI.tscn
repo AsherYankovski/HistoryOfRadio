@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b1mcruu4apv0e"]
+
+[ext_resource type="PackedScene" uid="uid://oq637uty2w1p" path="res://scenes/Button.tscn" id="1_l0daw"]
+
+[node name="Scroll" type="ScrollContainer" unique_id=558109074]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -916.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
+scroll_horizontal_by_default = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1414050318]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="Button" parent="HBoxContainer" unique_id=2111804290 instance=ExtResource("1_l0daw")]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.2, 0.2)
+offset_transform_visual_only = false
