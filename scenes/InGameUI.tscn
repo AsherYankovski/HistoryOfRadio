@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hdbcrixh7onj" path="res://scenes/in_game_ui.gd" id="1_5ldle"]
 [ext_resource type="PackedScene" uid="uid://pstk2umbij7q" path="res://scenes/element.tscn" id="2_5ldle"]
-[ext_resource type="PackedScene" uid="uid://oq637uty2w1p" path="res://scenes/Button.tscn" id="3_5ldle"]
+[ext_resource type="PackedScene" uid="uid://b1mcruu4apv0e" path="res://scenes/HscrollUI.tscn" id="3_5ldle"]
 
 [node name="root" type="Control" unique_id=1493276269]
 layout_mode = 3
@@ -16,10 +16,5 @@ script = ExtResource("1_5ldle")
 [node name="Preloader" type="ResourcePreloader" parent="." unique_id=1533720909]
 resources = [PackedStringArray("element"), [ExtResource("2_5ldle")]]
 
-[node name="Buttons" type="HBoxContainer" parent="." unique_id=416848454]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button" parent="Buttons" unique_id=2111804290 instance=ExtResource("3_5ldle")]
-layout_mode = 2
+[node name="Scroll" parent="." unique_id=558109074 instance=ExtResource("3_5ldle")]
+layout_mode = 1

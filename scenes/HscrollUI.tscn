@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://oq637uty2w1p" path="res://scenes/Button.tscn" id="1_l0daw"]
 
 [node name="Scroll" type="ScrollContainer" unique_id=558109074]
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.75600004
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -916.0
+offset_top = -0.4000244
 grow_horizontal = 2
 grow_vertical = 0
 horizontal_scroll_mode = 2
@@ -16,10 +16,59 @@ scroll_horizontal_by_default = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1414050318]
 layout_mode = 2
-theme_override_constants/separation = 200
+theme_override_constants/separation = 400
 
-[node name="Button" parent="HBoxContainer" unique_id=2111804290 instance=ExtResource("1_l0daw")]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1295140457]
+layout_mode = 2
+theme_override_constants/margin_left = -430
+theme_override_constants/margin_top = -428
+theme_override_constants/margin_right = -430
+theme_override_constants/margin_bottom = -428
+
+[node name="Button" parent="HBoxContainer/MarginContainer2" unique_id=2111804290 instance=ExtResource("1_l0daw")]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(0.2, 0.2)
 offset_transform_visual_only = false
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=685683830]
+layout_mode = 2
+theme_override_constants/margin_left = -430
+theme_override_constants/margin_top = -428
+theme_override_constants/margin_right = -430
+theme_override_constants/margin_bottom = -428
+
+[node name="Button2" parent="HBoxContainer/MarginContainer" unique_id=1949676493 instance=ExtResource("1_l0daw")]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.2, 0.2)
+offset_transform_visual_only = false
+Name = "Capasitor"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer" unique_id=939693532]
+layout_mode = 2
+theme_override_constants/margin_left = -430
+theme_override_constants/margin_top = -428
+theme_override_constants/margin_right = -430
+theme_override_constants/margin_bottom = -428
+
+[node name="Button2" parent="HBoxContainer/MarginContainer3" unique_id=571873419 instance=ExtResource("1_l0daw")]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.2, 0.2)
+offset_transform_visual_only = false
+Name = "Coil"
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer" unique_id=1782356543]
+layout_mode = 2
+theme_override_constants/margin_left = -430
+theme_override_constants/margin_top = -428
+theme_override_constants/margin_right = -430
+theme_override_constants/margin_bottom = -428
+
+[node name="Button2" parent="HBoxContainer/MarginContainer4" unique_id=927896173 instance=ExtResource("1_l0daw")]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.2, 0.2)
+offset_transform_visual_only = false
+Name = "Resitor"
