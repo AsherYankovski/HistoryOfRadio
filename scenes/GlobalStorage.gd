@@ -6,5 +6,5 @@ extends Node
 
 var config = ConfigFile.new()
 
-func _ready() -> void:
-	config.set_value("")
+#func _ready() -> void:
+#	config.set_value("")

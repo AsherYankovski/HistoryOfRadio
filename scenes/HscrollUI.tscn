@@ -19,6 +19,7 @@ layout_mode = 2
 theme_override_constants/separation = 400
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1295140457]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = -430
 theme_override_constants/margin_top = -428
@@ -27,8 +28,6 @@ theme_override_constants/margin_bottom = -428
 
 [node name="Button" parent="HBoxContainer/MarginContainer2" unique_id=2111804290 instance=ExtResource("1_l0daw")]
 layout_mode = 2
-offset_transform_enabled = true
-offset_transform_scale = Vector2(0.2, 0.2)
 offset_transform_visual_only = false
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=685683830]

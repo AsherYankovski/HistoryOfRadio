@@ -17,6 +17,7 @@ func _ready() -> void:
 	get_node("Element").region_rect = textures[Name]
 	
 	if shortcut == null:
+		get_node("Shortcut").text = Name[0]
 		pass
 	elif shortcut.has_valid_event():
 		get_node("Shortcut").text = shortcut.get_as_text()[0]
