@@ -14,20 +14,21 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var hit = RayCast.get_collider()
 	#print(RayCast.target_position, hit, test)
-	if Input.is_action_pressed("ЛКМ") and hit == test:
+	var is_LKM: bool = Input.is_action_pressed("ЛКМ")
+	if is_LKM and hit == test:
 		is_draging = 1
-	if Input.is_action_pressed("ЛКМ") and is_draging:
+	if is_LKM and is_draging:
 		velocity.x = Input.get_last_mouse_velocity().x*speed*delta
 		velocity.y = -Input.get_last_mouse_velocity().y*speed*delta
 	else:
 		if mode:
 			velocity.x = Input.get_last_mouse_velocity().x*speed*delta
 			velocity.y = -Input.get_last_mouse_velocity().y*speed*delta
-			if Input.is_action_just_pressed("ЛКМ"):
-				is_draging = 0
-				mode = 0
 		else:
 			is_draging = 0
+	if Input.is_action_pressed("ThorowBlock") and mode:
+		is_draging = 0
+		mode = 0
 	if not is_on_floor() and not is_draging:
 		velocity.y -= g*delta
 	if Input.is_action_pressed("RotationYСlockwise") and is_draging:

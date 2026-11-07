@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7ly75li1nwi2"]
 
 [ext_resource type="Script" uid="uid://f8ttss6k1dr8" path="res://scenes/menu_ui.gd" id="1_b5e6c"]
-[ext_resource type="Texture2D" uid="uid://ce3cuxqlldbyh" path="res://assetes/Button.png" id="1_hr55n"]
+[ext_resource type="Texture2D" uid="uid://eg1mt1unmiu4" path="res://assetes/Button_s.png" id="2_tner2"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_hr55n"]
 
@@ -16,8 +16,8 @@ offset_bottom = 900.0
 
 [node name="FoldableContainer" type="FoldableContainer" parent="Control" unique_id=1584825843]
 layout_mode = 0
-offset_right = 295.0
-offset_bottom = 171.0
+offset_right = 542.0
+offset_bottom = 266.0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/FoldableContainer" unique_id=779881122]
 layout_mode = 2
@@ -28,6 +28,8 @@ layout_mode = 2
 
 [node name="Block1" type="Button" parent="Control/FoldableContainer/ScrollContainer/HBoxContainer" unique_id=862359651]
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_visual_only = false
 theme_override_colors/font_color = Color(0.3, 0.3, 0.3, 1)
 theme_override_colors/font_focus_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 theme_override_colors/font_hover_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
@@ -48,7 +50,7 @@ theme_override_colors/icon_pressed_color = Color(0.3019608, 0.3019608, 0.3019608
 theme_override_font_sizes/font_size = 26
 toggle_mode = true
 text = "Block"
-icon = ExtResource("1_hr55n")
+icon = ExtResource("2_tner2")
 flat = true
 icon_alignment = 1
 
@@ -61,7 +63,7 @@ theme_override_colors/icon_pressed_color = Color(0.3019608, 0.3019608, 0.3019608
 theme_override_font_sizes/font_size = 26
 toggle_mode = true
 text = "Block"
-icon = ExtResource("1_hr55n")
+icon = ExtResource("2_tner2")
 flat = true
 icon_alignment = 1
 
