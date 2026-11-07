@@ -1,11 +1,8 @@
 [gd_scene format=4 uid="uid://dqucak0padu32"]
 
 [ext_resource type="Script" uid="uid://by3lo3iof8v1w" path="res://scenes/camera_3d.gd" id="1_qxqdo"]
-[ext_resource type="Script" uid="uid://d4hl2xfl61r7x" path="res://scenes/test3d.gd" id="2_rj2sv"]
 [ext_resource type="PackedScene" uid="uid://dohy3n3dfm76o" path="res://scenes/test3d.tscn" id="3_svhal"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_6ifbq"]
-size = Vector3(0.6379547, 0.6236572, 0.51934814)
+[ext_resource type="PackedScene" uid="uid://b7ly75li1nwi2" path="res://scenes/menu_ui.tscn" id="4_svhal"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_570bx"]
 
@@ -45,35 +42,33 @@ size = Vector3(2.0269775, 0.33935547, 1.7907715)
 [node name="root" type="Node3D" unique_id=1728982531]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=98962173]
-transform = Transform3D(1, 0, 0, 0, 0.9622132, 0.27229705, 0, -0.27229705, 0.9622132, 0.037600547, 1.2797475, 2.8754995)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0.037600547, 2.1977768, 1.1273389)
 fov = 70.0
 script = ExtResource("1_qxqdo")
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=1511410632]
-transform = Transform3D(1, 0, 0, 0, -1.5517543e-07, -1, 0, 3.55, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0)
+target_position = Vector3(0, -5, -5)
 collision_mask = 2
+debug_shape_custom_color = Color(0.9490196, 0, 0, 1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1578636606]
 transform = Transform3D(0.74483585, 0, -0.6672478, 0.25940606, 0.92133474, 0.28957, 0.61475855, -0.38877022, 0.6862432, -2.135765, 1.3790748, 1.7441647)
 
-[node name="test" type="CharacterBody3D" parent="." unique_id=179841138]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.061366796, 0.5143982, -0.51475257)
-collision_layer = 2
-script = ExtResource("2_rj2sv")
-
-[node name="test_Sprite" parent="test" unique_id=33286147 instance=ExtResource("3_svhal")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00608626, 0.09896684, -0.011904001)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="test" unique_id=157931054]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029792786, 0.3949585, 0.07064819)
-shape = SubResource("BoxShape3D_6ifbq")
+[node name="test3d" parent="." unique_id=33286147 instance=ExtResource("3_svhal")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.055280536, 0.61336505, -0.52665657)
 
 [node name="table" type="StaticBody3D" parent="." unique_id=502876965]
 
-[node name="Cube_002" type="MeshInstance3D" parent="table" unique_id=1723309900]
+[node name="Cube" type="MeshInstance3D" parent="table" unique_id=1723309900]
 transform = Transform3D(1, 0, 0, 0, 0.01, 0, 0, 0, 1, -0.118193865, 0.045734406, -0.42182207)
 mesh = SubResource("ArrayMesh_fyyvv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="table" unique_id=2090103614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13580322, -0.084228516, -0.39538574)
 shape = SubResource("BoxShape3D_rj2sv")
+
+[node name="menu_ui" parent="." unique_id=1324243529 instance=ExtResource("4_svhal")]
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="." unique_id=1556930796]
+resources = [PackedStringArray("Block2"), [ExtResource("3_svhal")]]
