@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://pstk2umbij7q"]
+
+[ext_resource type="Script" uid="uid://dng2f8mj5lwt6" path="res://scenes/element.gd" id="1_3t12a"]
+[ext_resource type="Texture2D" uid="uid://buf7f47b01qh5" path="res://assetes/Atlas.png" id="2_eox7m"]
+
+[node name="Element" type="Node2D" unique_id=126801828]
+script = ExtResource("1_3t12a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=66081351]
+texture = ExtResource("2_eox7m")
+region_enabled = true
+region_rect = Rect2(7, 651, 600, 110)
+region_filter_clip_enabled = true

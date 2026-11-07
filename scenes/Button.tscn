@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://oq637uty2w1p"]
+
+[ext_resource type="Script" uid="uid://b4xjb07r4ijsa" path="res://scenes/button.gd" id="1_rtit6"]
+[ext_resource type="Texture2D" uid="uid://buf7f47b01qh5" path="res://assetes/Atlas.png" id="2_lc4xp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lc4xp"]
+load_path = "res://.godot/imported/Button.png-ff179fc0cf50fee6207ae0c6f7c533e9.ctex"
+
+[node name="Button" type="Button" unique_id=2111804290]
+offset_right = 1073.0
+offset_bottom = 1068.0
+theme_override_colors/icon_pressed_color = Color(0.69135684, 0.6913568, 0.69135684, 1)
+theme_override_colors/icon_hover_color = Color(0.29586652, 0.2958665, 0.2958665, 1)
+icon = SubResource("CompressedTexture2D_lc4xp")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_rtit6")
+
+[node name="Name" type="Label" parent="." unique_id=1242831377]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 704.0
+offset_right = 834.0
+offset_bottom = 904.0
+theme_override_colors/font_color = Color(0.25, 0.25, 0.25, 1)
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Shortcut" type="Label" parent="." unique_id=139428810]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 184.0
+offset_right = 384.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.25, 0.25, 0.25, 1)
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="Label" parent="." unique_id=1787116128]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 184.0
+offset_right = 884.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(0.25, 0.25, 0.25, 1)
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Element" type="Sprite2D" parent="." unique_id=1131038167]
+position = Vector2(530, 530)
+texture = ExtResource("2_lc4xp")
+region_enabled = true
+region_rect = Rect2(8, 8, 0, 0)
