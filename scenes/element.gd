@@ -1,5 +1,5 @@
 extends Node2D
-signal clicked(Node_name: String)
+signal clicked(node_name: String)
 
 @export var element_name: String = "Element"
 
@@ -8,5 +8,5 @@ func _ready() -> void:
 
 
 func _on_area_2d_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
-	if Input.is_action_just_pressed("LClick"):
-		emit_signal("clicked",element_name)
+	if Input.is_action_pressed("LClick"):
+		emit_signal("clicked",name)
