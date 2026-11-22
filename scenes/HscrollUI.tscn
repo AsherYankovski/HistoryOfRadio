@@ -16,7 +16,7 @@ scroll_horizontal_by_default = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1414050318]
 layout_mode = 2
-theme_override_constants/separation = 400
+theme_override_constants/separation = 600
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1295140457]
 visible = false

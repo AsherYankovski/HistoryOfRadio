@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dng2f8mj5lwt6" path="res://scenes/element.gd" id="1_3t12a"]
 [ext_resource type="Texture2D" uid="uid://buf7f47b01qh5" path="res://assetes/Atlas.png" id="2_eox7m"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3u82d"]
+size = Vector2(600, 110)
+
 [node name="Element" type="Node2D" unique_id=126801828]
 script = ExtResource("1_3t12a")
 
@@ -11,3 +14,10 @@ texture = ExtResource("2_eox7m")
 region_enabled = true
 region_rect = Rect2(7, 651, 600, 110)
 region_filter_clip_enabled = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1755013331]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1480030156]
+shape = SubResource("RectangleShape2D_3u82d")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

@@ -15,7 +15,7 @@ func _ready() -> void:
 	get_node("Name").text = Name
 	get_node("Value").text = Value
 	get_node("Element").region_rect = textures[Name]
-	
+
 	if shortcut == null:
 		get_node("Shortcut").text = Name[0]
 		pass

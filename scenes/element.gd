@@ -1,12 +1,12 @@
 extends Node2D
+signal clicked(Node_name: String)
 
 @export var element_name: String = "Element"
 
-var textures: Dictionary = {"Element": Rect2(0,0,0,0),
-														"Diode": Rect2(7,7,600,200),
-														"Capasitor": Rect2(7,257,600,200),
-														"Coil": Rect2(7,501,600,113),
-														"Resitor": Rect2(7,651,600,110)}
-
 func _ready() -> void:
-	get_node("Sprite2D").region_rect = textures[element_name]
+	get_node("Sprite2D").region_rect = Storage.textures[element_name]
+
+
+func _on_area_2d_input_event(_viewport: Node, _event: InputEvent, _shape_idx: int) -> void:
+	if Input.is_action_just_pressed("LClick"):
+		emit_signal("clicked",element_name)
